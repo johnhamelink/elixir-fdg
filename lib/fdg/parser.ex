@@ -8,7 +8,6 @@ defmodule FDG.Parser do
     "digraph G { a [label=\\"A\\"]; }"
 
   """
-  require Logger
 
   @typedoc """
   Node tuple
