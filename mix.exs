@@ -5,9 +5,15 @@ defmodule FDG.Mixfile do
     [app: :fdg,
      version: "0.0.1",
      elixir: "~> 1.1",
+     name: "FDG",
+     source_url: "https://github.com/johnhamelink/elixir-fdg",
+     homepage: "https://github.com/johnhamelink/elixir-fdg",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
+     package: package,
      deps: deps,
+     docs: [extras: ["README.md"]],
      dialyzer: []
    ]
   end
@@ -16,7 +22,7 @@ defmodule FDG.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    []
   end
 
   # Dependencies can be Hex packages:
@@ -32,7 +38,29 @@ defmodule FDG.Mixfile do
     [
       {:mix_test_watch, "~> 0.2", only: :dev},
       {:ex_spec, "~> 1.0.0", only: :test},
-      {:inch_ex, only: :docs}
+      {:inch_ex, only: :docs},
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
+
+  defp description do
+    """
+    This project aims to be a simple library with which to build force directed
+    graphs. Ideally, FDG will be used to produce visualiations of networks and
+    static analysis of code.
+    """
+  end
+
+  defp package do
+    [
+      maintainers: ["John Hamelink"],
+      licenses: ["MIT"],
+      links: %{
+        "Github" => "https://github.com/johnhamelink/elixir-fdg",
+        "Docs" => "https://github.com/johnhamelink/elixir-fdg/wiki"
+      }
+    ]
+  end
+
 end
