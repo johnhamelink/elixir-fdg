@@ -58,7 +58,7 @@ defmodule FDG.Mixfile do
       licenses: ["MIT"],
       links: %{
         "Github" => "https://github.com/johnhamelink/elixir-fdg",
-        "Docs" => "https://github.com/johnhamelink/elixir-fdg/wiki"
+        "Docs" => "http://hexdocs.pm/fdg"
       }
     ]
   end
