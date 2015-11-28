@@ -31,7 +31,8 @@ defmodule FDG.Mixfile do
   defp deps do
     [
       {:mix_test_watch, "~> 0.2", only: :dev},
-      {:ex_spec, "~> 1.0.0", only: :test}
+      {:ex_spec, "~> 1.0.0", only: :test},
+      {:inch_ex, only: :docs}
     ]
   end
 end

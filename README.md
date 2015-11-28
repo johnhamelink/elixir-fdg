@@ -1,4 +1,4 @@
-# FDG [![Build Status](https://travis-ci.org/johnhamelink/elixir-fdg.svg?branch=master)](https://travis-ci.org/johnhamelink/elixir-fdg)
+# FDG [![Build Status](https://travis-ci.org/johnhamelink/elixir-fdg.svg?branch=master)](https://travis-ci.org/johnhamelink/elixir-fdg) [![Inline docs](http://inch-ci.org/github/johnhamelink/elixir-fdg.svg)](http://inch-ci.org/github/johnhamelink/elixir-fdg)
 
 ## This project is not yet complete, nor is it ready to be used. If you fancy helping making it complete, be my guest!
 
