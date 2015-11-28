@@ -1,6 +1,6 @@
-# FDG
+# FDG [![Build Status](https://travis-ci.org/johnhamelink/elixir-fdg.svg?branch=master)](https://travis-ci.org/johnhamelink/elixir-fdg)
 
-**TODO: Add description**
+Simple Syntax for producing Force directed graphs!
 
 ## Installation
 
