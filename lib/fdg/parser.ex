@@ -4,8 +4,8 @@ defmodule FDG.Parser do
 
   ## Examples
 
-    iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
-    "digraph G { a [label=\"A\"]; }"
+      iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
+      "digraph G { a [label=\"A\"]; }"
 
   """
 
@@ -20,8 +20,8 @@ defmodule FDG.Parser do
 
   ## Examples
 
-    iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
-    "digraph G { a [label=\"A\"]; }"
+      iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
+      "digraph G { a [label=\"A\"]; }"
 
   """
   @spec to_dot([node_tuple]) :: String.t
