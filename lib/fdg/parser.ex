@@ -1,11 +1,11 @@
 defmodule FDG.Parser do
-  @moduledoc """
+  @moduledoc ~S"""
   Parses FDG AST into Graphviz (.dot) syntax
 
   ## Examples
 
     iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
-    "digraph G { a [label=\\"A\\"]; }"
+    "digraph G { a [label=\"A\"]; }"
 
   """
 
@@ -14,14 +14,14 @@ defmodule FDG.Parser do
   """
   @type node_tuple :: {:node, [label: String.t, children: [...]]}
 
-  @doc """
-  Turns FDG ast tuples into a dot-syntax string, ready to
+  @doc ~S"""
+  Turns FDG `ast` tuples into a dot-syntax string, ready to
   be parsed into a graph using Graphviz.
 
   ## Examples
 
     iex> FDG.Parser.to_dot([{:node, [label: "A", children: []]}])
-    "digraph G { a [label=\\"A\\"]; }"
+    "digraph G { a [label=\"A\"]; }"
 
   """
   @spec to_dot([node_tuple]) :: String.t
