@@ -3,7 +3,7 @@ defmodule FDG.Mixfile do
 
   def project do
     [app: :fdg,
-     version: "0.0.3",
+     version: "0.0.4",
      elixir: "~> 1.1",
      name: "FDG",
      source_url: "https://github.com/johnhamelink/elixir-fdg",
