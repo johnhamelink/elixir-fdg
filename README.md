@@ -2,7 +2,7 @@
 
 ---
 
-[![Hex Version](https://img.shields.io/hexpm/v/fdg.svg)](https://hex.pm/packages/fdg) [![Build Status](https://travis-ci.org/johnhamelink/elixir-fdg.svg?branch=master)](https://travis-ci.org/johnhamelink/elixir-fdg)  [![Inline docs](http://inch-ci.org/github/johnhamelink/elixir-fdg.svg)](http://inch-ci.org/github/johnhamelink/elixir-fdg) [![HexDocs](https://img.shields.io/badge/-HexDocs-blue.svg)](https://hexdocs.pm/fdg)
+[![Hex Version](https://img.shields.io/hexpm/v/fdg.svg)](https://hex.pm/packages/fdg) [![Build Status](https://travis-ci.org/johnhamelink/elixir-fdg.svg?branch=master)](https://travis-ci.org/johnhamelink/elixir-fdg)  [![Inline docs](http://inch-ci.org/github/johnhamelink/elixir-fdg.svg)](http://inch-ci.org/github/johnhamelink/elixir-fdg) [![HexDocs](https://img.shields.io/badge/Hex-Docs-blue.svg)](https://hexdocs.pm/fdg)
 
 ---
 
