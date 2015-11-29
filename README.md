@@ -8,11 +8,17 @@
 
 ## This project is not yet complete, nor is it ready to be used. If you fancy helping making it complete, be my guest!
 
-Simple library for producing Force directed graphs!
+FDG is a simple library for producing Force directed graphs. FDG aims to allow you to build a simple tree of relations into a graph that can then be exported in multiple different formats for further analysis.
+
+FDG plans to support:
+
+ - [x] `dot` syntax for [Graphviz](http://www.graphviz.org), and all the image formats it supports as a result.
+ - [ ] [GraphML](http://graphml.graphdrawing.org) for use with exporting to tools such as [Gephi](https://gephi.github.io)
+ - [ ] [Cypher query language](http://neo4j.com/docs/stable/cypher-query-lang.html) for importing into supported Graph databases, such as [Neo4j](neo4j.com)
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The package can be installed as:
 
   1. Add fdg to your list of dependencies in `mix.exs`:
 
@@ -25,3 +31,17 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
         def application do
           [applications: [:fdg]]
         end
+
+## Configuration
+
+### Graphviz
+
+If you wish to use the Graphviz parser, make sure you have Graphviz installed and in your [PATH](https://en.wikipedia.org/wiki/PATH_(variable\)). The Graphviz parser uses the `dot` command to produce its images.
+
+## Getting Started
+
+** TODO - please refer to the [Hexdocs](https://hexdocs.pm/fdg) for now. **
+
+## Further Documentation
+
+Up to date documentation is available on [Hexdocs](https://hexdocs.pm/fdg) - check there for detailed documentation of all functionality.
