@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	<graph edgedefault="directed" id="G">
+		<key attr.name="label" attr.type="string" for="node" id="label"/>
+		<node id="a" labels="A">
+			<data key="label">A</data>
+		</node>
+		<node id="b" labels="B">
+			<data key="label">B</data>
+		</node>
+		<node id="c" labels="C">
+			<data key="label">C</data>
+		</node>
+		<edge id="edge_a_b" label="child" source="a" target="b">
+			<data key="label">child</data>
+		</edge>
+		<edge id="edge_a_c" label="child" source="a" target="c">
+			<data key="label">child</data>
+		</edge>
+	</graph>
+</graphml>

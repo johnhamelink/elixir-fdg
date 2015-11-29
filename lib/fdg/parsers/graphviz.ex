@@ -88,7 +88,7 @@ defmodule FDG.Parsers.Graphviz do
 
   @spec parse_dot([FDG.Parser.node_tuple]) :: String.t
   defp parse_dot([{:node, [label: label, children: children]}]) when is_list(children) do
-    id = normalize_label(label)
+    id = FDG.Parser.normalize_label(label)
     [
       define_node(label),
       parse_dot(children),
@@ -98,7 +98,7 @@ defmodule FDG.Parsers.Graphviz do
 
   @spec parse_dot([FDG.Parser.node_tuple]) :: String.t
   defp parse_dot([{:node, [label: label, children: children]} | tail]) when is_list(children) and is_list(tail) do
-    id = normalize_label(label)
+    id = FDG.Parser.normalize_label(label)
     [
       define_node(label),
       parse_dot(tail),
@@ -113,15 +113,9 @@ defmodule FDG.Parsers.Graphviz do
   defp define_node(label) do
     atts = ["label=\"#{label}\""]
     [
-      normalize_label(label),
+      FDG.Parser.normalize_label(label),
       "[#{Enum.join(atts, ", ")}];"
     ] |> Enum.join(" ")
-  end
-
-  @spec normalize_label(String.t) :: String.t
-  defp normalize_label(label) do
-    Regex.replace(~r/[^a-zA-Z]/, label, "_")
-    |> String.downcase
   end
 
   @spec parse_children_associations(String.t, [FDG.Parser.node_tuple]) :: String.t
@@ -129,9 +123,9 @@ defmodule FDG.Parsers.Graphviz do
     Enum.reduce(children, "", fn ({:node, [label: child_label, children: _]}, acc) ->
       [
         acc,
-        normalize_label(label),
+        FDG.Parser.normalize_label(label),
         "->",
-        "#{normalize_label(child_label)};"
+        "#{FDG.Parser.normalize_label(child_label)};"
       ] |> Enum.join(" ")
     end)
   end
