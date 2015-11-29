@@ -1,30 +1,46 @@
 defmodule FDG.Importers.Digraph do
 
+  @doc ~S"""
+  Retrieves a `dag` (Directed acyclic graph), finds its root,
+  and builds an AST from it by iterating through its direct
+  neighbours.
+
+  ## Examples:
+
+    iex> dag = :digraph.new([:acyclic])
+    iex> :digraph.add_vertex(dag, :a, [label: "A"])
+    iex> :digraph.add_vertex(dag, :b, [label: "B"])
+    iex> :digraph.add_vertex(dag, :c, [label: "C"])
+    iex> :digraph.add_edge(dag, :a, :b)
+    iex> :digraph.add_edge(dag, :a, :c)
+    iex> FDG.Importers.Digraph.import(dag)
+    [node: [label: "A",
+      children: [
+        node: [label: "C", children: []],
+        node: [label: "B", children: []]
+      ]
+    ]]
+
+  """
+  @spec import(digraph_type) :: [node_type]
   def import(dag = {:digraph, _, _, _, _}) do
     dag
     |> find_root_vertex
     |> build_ast
   end
 
-  def find_root_vertex(dag = {:digraph, _, _, _, _}) do
+  defp find_root_vertex(dag = {:digraph, _, _, _, _}) do
     find_root_vertex(dag, :digraph.vertices(dag))
   end
 
-  @doc ~S"""
-  Loop through vertices and return the first one with no parent
-  """
-  def find_root_vertex(dag, vertices = [head | tail]) when is_list(vertices) and is_atom(head) do
+  defp find_root_vertex(dag, vertices = [head | tail]) when is_list(vertices) and is_atom(head) do
     case :digraph.in_degree(dag, head) do
       0 -> {:vertex, dag, head}
       _ -> find_root_vertex(dag, tail)
     end
   end
 
-  @doc ~S"""
-  Find the vertex, retrieve it's direct children, and build an ast from it,
-  then return a `node_tuple` comprising the vertex and it's descendants.
-  """
-  def build_ast({:vertex, dag, vertex}) do
+  defp build_ast({:vertex, dag, vertex}) do
     {_atom, [label: root_label]} = :digraph.vertex(dag, vertex)
     [node: [
         label: root_label,
@@ -33,16 +49,9 @@ defmodule FDG.Importers.Digraph do
     ]
   end
 
-  @doc ~S"""
-  Return an empty array if we've made it to the end of a branch
-  """
-  def build_ast({:vertices, _dag, []}), do: []
+  defp build_ast({:vertices, _dag, []}), do: []
 
-  @doc ~S"""
-  Return a list containing the vertex for the current node and
-  the vertices for the sibling nodes.
-  """
-  def build_ast({:vertices, dag, [ head | tail]}) when is_atom(head) do
+  defp build_ast({:vertices, dag, [ head | tail]}) when is_atom(head) do
     [
       build_ast({:vertex, dag, head}),
       build_ast({:vertices, dag, tail})
