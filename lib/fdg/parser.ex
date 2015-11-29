@@ -17,8 +17,8 @@ defmodule FDG.Parser do
   @type node_tuple :: {:node, [label: String.t, children: [node_tuple]]}
 
   @doc ~S"""
-  Turns FDG `ast` tuples into a PNG digraph, using `Graphviz's`
-  `dot` command.
+  Turns FDG `dot_syntax` string into a PNG digraph, using `Graphviz's`
+  `dot` command. Returns the filename of the output file `output_filename`.
 
   ## Examples
 
@@ -34,8 +34,8 @@ defmodule FDG.Parser do
   end
 
   @doc ~S"""
-  Turns FDG `ast` tuples into an SVG digraph, using `Graphviz's`
-  `dot` command.
+  Turns FDG `dot_syntax` string into an SVG digraph, using `Graphviz's`
+  `dot` command. Returns the filename of the output file `output_filename`.
 
   ## Examples
 
