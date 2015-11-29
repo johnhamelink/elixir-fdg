@@ -10,7 +10,7 @@
 
 FDG is a simple library for producing Force directed graphs. FDG aims to allow you to build a simple tree of relations into a graph that can then be exported in multiple different formats for further analysis.
 
-FDG plans to support:
+### FDG plans to support:
 
  - [x] `dot` syntax for [Graphviz](http://www.graphviz.org), and all the image formats it supports as a result.
  - [ ] [GraphML](http://graphml.graphdrawing.org) for use with exporting to tools such as [Gephi](https://gephi.github.io)
