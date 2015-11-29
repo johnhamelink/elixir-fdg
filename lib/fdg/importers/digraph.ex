@@ -1,4 +1,8 @@
 defmodule FDG.Importers.Digraph do
+  @moduledoc ~S"""
+  Allows Erlang Digraphs (acyclic ones in particular)
+  to be parsed and converted into other formats.
+  """
 
   @typedoc """
   Used to describe Erlang Digraphs
@@ -18,19 +22,19 @@ defmodule FDG.Importers.Digraph do
 
   ## Examples:
 
-    iex> dag = :digraph.new([:acyclic])
-    iex> :digraph.add_vertex(dag, :a, [label: "A"])
-    iex> :digraph.add_vertex(dag, :b, [label: "B"])
-    iex> :digraph.add_vertex(dag, :c, [label: "C"])
-    iex> :digraph.add_edge(dag, :a, :b)
-    iex> :digraph.add_edge(dag, :a, :c)
-    iex> FDG.Importers.Digraph.import(dag)
-    [node: [label: "A",
-      children: [
-        node: [label: "C", children: []],
-        node: [label: "B", children: []]
-      ]
-    ]]
+      iex> dag = :digraph.new([:acyclic])
+      iex> :digraph.add_vertex(dag, :a, [label: "A"])
+      iex> :digraph.add_vertex(dag, :b, [label: "B"])
+      iex> :digraph.add_vertex(dag, :c, [label: "C"])
+      iex> :digraph.add_edge(dag, :a, :b)
+      iex> :digraph.add_edge(dag, :a, :c)
+      iex> FDG.Importers.Digraph.import(dag)
+      [node: [label: "A",
+        children: [
+          node: [label: "C", children: []],
+          node: [label: "B", children: []]
+        ]
+      ]]
 
   """
   @spec import(digraph_type) :: [FDG.Parser.node_type]
