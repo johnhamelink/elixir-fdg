@@ -36,7 +36,7 @@ The package can be installed as:
 
 ### Graphviz
 
-If you wish to use the Graphviz parser, make sure you have Graphviz installed and in your [PATH](https://en.wikipedia.org/wiki/PATH_(variable\)). The Graphviz parser uses the `dot` command to produce its images.
+If you wish to use the Graphviz parser, make sure you have Graphviz installed and in your [PATH](https://en.wikipedia.org/wiki/PATH_(variable)). The Graphviz parser uses the `dot` command to produce its images.
 
 ## Getting Started
 
