@@ -40,7 +40,7 @@ If you wish to use the Graphviz parser, make sure you have Graphviz installed an
 
 ## Getting Started
 
-** TODO - please refer to the [Hexdocs](https://hexdocs.pm/fdg) for now. **
+##### TODO - please refer to the [Hexdocs](https://hexdocs.pm/fdg) for now.
 
 ## Further Documentation
 
