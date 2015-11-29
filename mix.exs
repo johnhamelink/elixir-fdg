@@ -36,7 +36,7 @@ defmodule FDG.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:xml_builder, git: "https://github.com/johnhamelink/xml_builder", branch: "merged"},
+      {:xml_builder, git: "https://github.com/joshnuss/xml_builder", branch: "master"},
       {:mix_test_watch, "~> 0.2", only: :dev},
       {:ex_spec, "~> 1.0.0", only: :test},
       {:inch_ex, only: :docs},

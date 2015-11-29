@@ -5,4 +5,4 @@
   "inch_ex": {:hex, :inch_ex, "0.4.0"},
   "mix_test_watch": {:hex, :mix_test_watch, "0.2.4"},
   "poison": {:hex, :poison, "1.5.0"},
-  "xml_builder": {:git, "https://github.com/johnhamelink/xml_builder", "4033606ff1b22e805d2addcc7feb095540d7a6d1", [branch: "merged"]}}
+  "xml_builder": {:git, "https://github.com/joshnuss/xml_builder", "7e35f9094d9de23d654e7b33c2e86dc0374d572d", [branch: "master"]}}
