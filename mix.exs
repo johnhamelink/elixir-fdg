@@ -40,8 +40,8 @@ defmodule FDG.Mixfile do
       {:mix_test_watch, "~> 0.2", only: :dev},
       {:ex_spec, "~> 1.0.0", only: :test},
       {:inch_ex, only: :docs},
-      {:earmark, "~> 0.1", only: :docs},
-      {:ex_doc, "~> 0.11", only: :docs},
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
 
