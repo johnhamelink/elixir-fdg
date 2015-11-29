@@ -4,9 +4,10 @@ elixir:
 otp_release:
   - 18.0
 
-before_install:
-  # We need GraphViz to draw figures of graphs and lattices:
-  - "sudo apt-get install graphviz"
+addons:
+  apt:
+    packages:
+    - graphviz
 
 after_script:
   - MIX_ENV=docs mix deps.get
