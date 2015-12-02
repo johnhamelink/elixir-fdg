@@ -16,7 +16,7 @@ FDG is a simple library for producing Force directed graphs. FDG aims to allow y
  - [x] [Erlang's Digraph module](http://www.erlang.org/doc/man/digraph.html)
  - [ ] `dot` syntax for [Graphviz](http://www.graphviz.org)
  - [ ] [GraphML](http://graphml.graphdrawing.org)
- - [ ] [Cypher query language](http://neo4j.com/docs/stable/cypher-query-lang.html) - specifically Neo4j database dumps
+ - [ ] [Cypher query language](http://neo4j.com/docs/stable/cypher-query-lang.html) - specifically Neo4j database dumps. Work going on in [johnhamelink/cyphex](https://github.com/johnhamelink/cyphex).
 
 #### Exporting to:
 
