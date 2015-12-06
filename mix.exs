@@ -37,14 +37,15 @@ defmodule FDG.Mixfile do
   defp deps do
     [
       {:xml_builder, github: "joshnuss/xml_builder", branch: "master"},
+      {:cyphex, github: "johnhamelink/cyphex", branch: "master"},
       {:mix_test_watch, "~> 0.2", only: :dev},
-      {:ex_spec, "~> 1.0.0", only: :test},
-      {:inch_ex, only: :docs},
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.11", only: :dev},
+      {:ex_spec, "~> 1.0.0", only: :test},
       {:neo4j, github: "dmitriid/neo4j-erlang", only: :test},
       {:jiffy, github: "davisp/jiffy", only: :test},
       {:exjsx, "~> 3.2", only: :test},
+      {:inch_ex, only: :docs}
     ]
   end
 
